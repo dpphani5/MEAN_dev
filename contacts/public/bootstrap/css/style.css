@@ -1,0 +1,35 @@
+.no-margin
+{
+	margin:0px;
+
+}
+.no-padding
+{
+	
+	padding:0px;
+}
+.sticky-footer
+{
+	width: 100%;
+	background-color: #122;
+	color: #fff;
+	position:fixed; 
+	height:160px;
+	bottom: 0;
+	left: 0;
+	
+}
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+.bottom-footer
+{
+	border-top: 1px: solid;
+	border-color: #fff;
+}
+.navbar
+{
+
+padding-bottom: 40px;
+
+}

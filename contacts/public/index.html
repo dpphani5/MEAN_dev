@@ -1,0 +1,63 @@
+<!Doctype>
+    <html ng-app="Capp">
+        <head>
+             <title> Contact list app</title>
+            <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+           
+        </head>
+        <body>
+            <div class="container" ng-controller="AppCtrl">
+            <h1>Contact App</h1>
+                <table class="table">
+                <thead>
+                    <tr>
+                    <tr>
+                        <th>Sl. No</th>  
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Action</th>
+                        <th>&nbsp;</th>
+                     
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td><input class="form-control" ng-model="entry.name"></td>
+                                             <td><input class="form-control" ng-model="entry.email"></td>
+                                             <td><input class="form-control" ng-model="entry.password"></td>
+                        
+                            <td><button class="btn btn-primary" ng-click=" addContact()">Add Contact</button></td>
+                            <td><button class="btn btn-info" ng-click="update()">Update</button></td>
+                        </tr>
+                        <tr ng-repeat="entry in contactlist | filter:search | limitTo:limit" >
+                            <td>{{$index+1}}</td>
+                            <td>{{entry.name}}</td>
+                            <td>{{entry.email}}</td>
+                            <td>{{entry.password}}</td>
+                            <td><button class="btn btn-danger"ng-click="remove(entry._id)">Remove</button></td>
+                            <td><button class="btn btn-warning" ng-click="edit(entry._id)">Edit</button></td>
+                        </tr>
+                    </tbody>
+                
+                </table>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search for..."  ng-model="search.$">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" >Go!</button>
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div>
+            
+            
+<!--         <script src="bootstrap/js/bootstrap.min.js"></script>-->
+            <script src ="bootstrap/js/jquery.js"> </script>
+            <script src=" js/angular.min.js"></script>
+            
+               <script src=" controller/controller.js"></script>
+        </body>
+</html>    
