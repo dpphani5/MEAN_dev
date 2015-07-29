@@ -9,7 +9,7 @@ $http.get('/contactlist').success(function(response){
 console.log("igot the data");
     $scope.contactlist=response;
     $scope.entry = "";
-    console.log($scope.contactlist);
+  
 
 });
     };

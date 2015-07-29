@@ -6,13 +6,33 @@
            
         </head>
         <body>
+            <nav class="navbar navbar-default"  >
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                        </button>
+                        <a class="navbar-brand">App</a>
+                     </div>
+                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                             <li><a href="#">Login</a></li>
+                             <li><a href="#">Register</a></li>
+                        </ul>
+                     </div>
+                </div>
+            </nav>
+            <div ng-include="'login.html'"></div>
             <div class="container" ng-controller="AppCtrl">
-            <h1>Contact App</h1>
+            
                 <table class="table">
                 <thead>
                     <tr>
                     <tr>
-                        <th>Sl. No</th>  
+                         
                         <th>Name</th>
                         <th>Email</th>
                         <th>Password</th>
@@ -21,6 +41,7 @@
                      
                     </tr>
                     </thead>
+      
                     <tbody>
                         <tr>
                         <td><input class="form-control" ng-model="entry.name"></td>
@@ -30,8 +51,8 @@
                             <td><button class="btn btn-primary" ng-click=" addContact()">Add Contact</button></td>
                             <td><button class="btn btn-info" ng-click="update()">Update</button></td>
                         </tr>
-                        <tr ng-repeat="entry in contactlist | filter:search | limitTo:limit" >
-                            <td>{{$index+1}}</td>
+                        <tr ng-repeat="entry in contactlist" >
+                            
                             <td>{{entry.name}}</td>
                             <td>{{entry.email}}</td>
                             <td>{{entry.password}}</td>
@@ -41,21 +62,14 @@
                     </tbody>
                 
                 </table>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search for..."  ng-model="search.$">
-                      <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" >Go!</button>
-                      </span>
-                    </div><!-- /input-group -->
-                  </div><!-- /.col-lg-6 -->
-                </div><!-- /.row -->
             </div>
             
             
 <!--         <script src="bootstrap/js/bootstrap.min.js"></script>-->
             <script src ="bootstrap/js/jquery.js"> </script>
+        
+
+            <script src="bootstrap/js/bootstrap.min.js"></script>
             <script src=" js/angular.min.js"></script>
             
                <script src=" controller/controller.js"></script>
