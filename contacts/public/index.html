@@ -19,14 +19,15 @@
                      </div>
                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                             <li><a href="#">Login</a></li>
-                             <li><a href="#">Register</a></li>
+                             <li><a href="#/login">Login</a></li>
+                             <li><a href="#/register">Register</a></li>
                         </ul>
                      </div>
                 </div>
             </nav>
-            <div ng-include="'login.html'"></div>
-            <div class="container" ng-controller="AppCtrl">
+            <div ng-view></div>
+            
+          <!--  <div class="container" ng-controller="AppCtrl">
             
                 <table class="table">
                 <thead>
@@ -62,15 +63,19 @@
                     </tbody>
                 
                 </table>
-            </div>
+            </div> -->
             
             
-<!--         <script src="bootstrap/js/bootstrap.min.js"></script>-->
+      
+          
+
             <script src ="bootstrap/js/jquery.js"> </script>
         
 
             <script src="bootstrap/js/bootstrap.min.js"></script>
             <script src=" js/angular.min.js"></script>
+            <script src=" js/angular-route.min.js"></script>
+             <script src="bootstrap/js/bootstrap.min.js"></script>
             
                <script src=" controller/controller.js"></script>
         </body>
